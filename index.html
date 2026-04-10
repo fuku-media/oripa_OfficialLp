@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>ガチャ公式LP - 日本玩具センターオンライン</title>
+<title>日本玩具センターオンライン｜PSA10が当たるオンラインオリパ</title>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var
 f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PTQMJ2ZX');</script>
@@ -21,20 +21,21 @@ a{text-decoration:none;color:inherit}
 
 /* Header */
 .header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,0.85);border-bottom:1px solid #FFD700;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
-.header-logo{display:flex;align-items:center;height:36px}
+.header-logo{display:flex;align-items:center;height:36px;gap:8px}
 .header-logo img{height:100%;width:auto}
+.header-logo-text{font-family:'Reggae One',sans-serif;color:#FFD700;font-size:16px;font-weight:bold;white-space:nowrap}
 
 /* FV */
 .fv{position:relative;width:100%;padding-top:56px;padding-bottom:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;background-image:url('https://d2xsxph8kpxj0f.cloudfront.net/310519663526934310/f7fVVpZ6rZNq4FBiHQPfyK/fv-background-oripa-v4-N5gbFNPnfcTexGmQepcG4B.webp');background-size:cover;background-position:center;background-attachment:fixed}
 .fv h1{text-align:center;margin-bottom:24px;line-height:1.1;font-family:'Reggae One',sans-serif;font-size:clamp(32px,8vw,72px);color:#FF1744;text-shadow:3px 3px 0 #FFD700,6px 6px 0 #0a0a0a,-1px -1px 0 #FF6B00;font-weight:bold;letter-spacing:2px}
-.fv .sub{text-align:center;margin-bottom:48px;max-width:448px;font-size:clamp(14px,4vw,18px);line-height:1.6}
+.fv .sub{text-align:center;margin-bottom:48px;max-width:448px;font-size:clamp(14px,4vw,18px);line-height:1.6;color:#FFD700;text-shadow:2px 2px 0 #0a0a0a}
 
 /* CTA Button */
 .cta-btn{background:linear-gradient(180deg,#FF1744 0%,#b71c1c 100%);color:#FFD700;font-family:'Reggae One',sans-serif;padding:clamp(16px,4vw,24px) clamp(24px,8vw,48px);font-size:clamp(18px,5vw,24px);border:4px solid #FFD700;box-shadow:0 0 0 2px #0a0a0a,0 0 24px rgba(255,215,0,0.8);text-shadow:2px 2px 0 #0a0a0a;display:inline-block;font-weight:bold;transition:transform 0.2s}
 .cta-btn:hover{transform:scale(1.05)}
 .cta-btn:active{transform:scale(0.95)}
 .cta-btn-lg{padding:clamp(18px,5vw,28px) clamp(32px,10vw,56px);font-size:clamp(20px,5vw,28px);box-shadow:0 0 0 2px #0a0a0a,0 0 32px rgba(255,215,0,0.9)}
-.cta-micro{font-size:12px;color:#FFD700;margin-top:8px;text-align:center}
+.cta-micro{font-size:12px;color:#FFD700;margin-top:8px;text-align:center;text-shadow:2px 2px 0 #0a0a0a}
 
 /* LED Dots */
 .led{position:absolute;width:16px;height:16px;border-radius:50%;animation:pulse 1.5s cubic-bezier(0.4,0,0.6,1) infinite}
@@ -76,17 +77,36 @@ a{text-decoration:none;color:inherit}
 .machine-btn{display:block;width:100%;text-align:center;padding:8px;background:linear-gradient(180deg,#FF1744 0%,#b71c1c 100%);color:#FFD700;font-family:'Reggae One',sans-serif;font-size:13px;border:2px solid #FFD700;box-shadow:0 0 0 1px #0a0a0a,0 0 8px rgba(255,215,0,0.5);text-shadow:1px 1px 0 #0a0a0a;font-weight:bold;transition:filter 0.2s}
 .machine-btn:hover{filter:brightness(1.1)}
 
-/* How to Play */
-.howto-list{display:flex;flex-direction:column;gap:32px}
-.howto-card{display:flex;flex-direction:column;align-items:center;gap:24px;padding:24px;background:#0a0a0a;border:2px solid #FFD700;box-shadow:0 0 0 1px #FF6B00,0 0 12px rgba(255,107,0,0.2);transition:transform 0.2s}
-.howto-card:hover{transform:scale(1.05)}
-@media(min-width:768px){.howto-card{flex-direction:row}}
-.howto-card img{width:256px;height:256px;object-fit:contain}
-.howto-card .content{flex:1}
-.howto-card h3{font-size:18px;margin-bottom:12px}
-.meter-bar{width:100%;height:24px;background:#1a1a1a;border:2px solid #FFD700;border-radius:4px;overflow:hidden;position:relative}
-.meter-fill{height:100%;transition:width 0.6s ease-out}
-.meter-label{font-family:'Reggae One',sans-serif;font-size:16px;color:#FFD700;margin-top:6px;text-align:right}
+/* How to Play -演出カード */
+.ens-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:768px){.ens-grid{grid-template-columns:repeat(3,1fr)}}
+.ens-card{background:#0a0a0a;border:2px solid #FFD700;box-shadow:0 0 0 1px #FF6B00,0 0 16px rgba(255,107,0,0.3);text-align:center;overflow:hidden;transition:transform 0.2s}
+.ens-card:hover{transform:scale(1.05)}
+.ens-card.gold{border-color:#FFD700;box-shadow:0 0 0 1px #FF6B00,0 0 12px rgba(255,107,0,0.3)}
+.ens-card.red{border-color:#FFD700;box-shadow:0 0 0 1px #FF6B00,0 0 12px rgba(255,107,0,0.3)}
+.ens-card.blue{border-color:#FFD700;box-shadow:0 0 0 1px #FF6B00,0 0 12px rgba(255,107,0,0.3)}
+.ens-img-wrap{width:100%;aspect-ratio:1/1;overflow:hidden;background:#111}
+.ens-img-wrap img{width:100%;height:100%;object-fit:contain}
+.ens-body{padding:20px 16px}
+.ens-label{font-family:'Reggae One',sans-serif;font-size:clamp(20px,5vw,24px);margin-bottom:8px}
+.ens-card.gold .ens-label{color:#FFD700;text-shadow:0 0 12px rgba(255,215,0,0.8)}
+.ens-card.red .ens-label{color:#FF1744;text-shadow:0 0 12px rgba(255,23,68,0.6)}
+.ens-card.blue .ens-label{color:#4FC3F7;text-shadow:0 0 12px rgba(79,195,247,0.6)}
+.ens-desc{font-size:13px;line-height:1.6;color:#ccc;margin-bottom:16px}
+.ens-desc strong{color:#fff}
+.ens-meter{width:100%;height:28px;background:#1a1a1a;border:2px solid #333;border-radius:14px;overflow:hidden;position:relative}
+.ens-meter-fill{height:100%;border-radius:12px;transition:width 0.6s ease-out}
+.ens-card.gold .ens-meter{border-color:#FFD700}
+.ens-card.gold .ens-meter-fill{background:linear-gradient(90deg,#FF1744,#FFD700);box-shadow:0 0 16px #FFD700}
+.ens-card.red .ens-meter{border-color:#FF1744}
+.ens-card.red .ens-meter-fill{background:linear-gradient(90deg,#FF6B00,#FF1744);box-shadow:0 0 16px #FF1744}
+.ens-card.blue .ens-meter{border-color:#4FC3F7}
+.ens-card.blue .ens-meter-fill{background:linear-gradient(90deg,#0288D1,#4FC3F7);box-shadow:0 0 16px #4FC3F7}
+.ens-expect{font-family:'Reggae One',sans-serif;font-size:18px;margin-top:8px}
+.ens-card.gold .ens-expect{color:#FFD700}
+.ens-card.red .ens-expect{color:#FF1744}
+.ens-card.blue .ens-expect{color:#4FC3F7}
+.ens-note{text-align:center;margin-top:32px;font-size:12px;color:#666}
 
 /* Reviews */
 .review-grid{display:grid;grid-template-columns:1fr;gap:24px}
@@ -125,7 +145,7 @@ footer{width:100%;padding:32px 16px;text-align:center;border-top:2px solid #FFD7
 
 <!-- Header -->
 <header class="header" id="header">
-  <div class="header-logo"><img src="images/logo.svg" alt="日本玩具センターオンライン"></div>
+  <div class="header-logo"><img src="images/logo-icon.svg" alt=""><span class="header-logo-text">日本玩具センターオンライン</span></div>
 </header>
 
 <!-- First View -->
@@ -137,14 +157,14 @@ footer{width:100%;padding:32px 16px;text-align:center;border-top:2px solid #FFD7
 
   <h1>一撃必殺！<br>運命のワンコインで<br>PSA10をブチ抜け！！</h1>
   <p class="sub">激アツ満載のオーバー継続<br>今すぐ初回出陣サポートあり</p>
-  <a href="https://gangu-center.com/?cd=vthbb3" class="cta-btn">軍資金を受け取る</a>
+  <a href="https://gangu-center.com/?cd=vthbb3" class="cta-btn">無料で会員登録する</a>
   <p class="cta-micro">初回出陣サポートあり</p>
 </section>
 
 <!-- Spec Section -->
 <section class="section section-bordered">
   <div class="container-lg">
-    <h2>当ホールの激アツスペックを見よ！</h2>
+    <h2>当サイトの激アツスペックを見よ！</h2>
     <p class="subtitle">- SPEC -</p>
     <div class="spec-grid">
       <div class="spec-card">
@@ -157,13 +177,13 @@ footer{width:100%;padding:32px 16px;text-align:center;border-top:2px solid #FFD7
         <div class="spec-icon">🏢</div>
         <h3 class="spec-title">軍資金サポート</h3>
         <p class="spec-value">300コイン</p>
-        <p class="spec-desc">初回出陣時に店側負担。最初の一発はノーリスクで台に座れる</p>
+        <p class="spec-desc">最初の一発はノーリスクでオリパを回せる！</p>
       </div>
       <div class="spec-card">
         <div class="spec-icon">📱</div>
         <h3 class="spec-title">スマホで完結</h3>
         <p class="spec-value">24時間</p>
-        <p class="spec-desc">いつでもどこでも！24時間営業の激アツホール、深夜デバイス可</p>
+        <p class="spec-desc">いつでもどこでも！24時間いつでも遊べる</p>
       </div>
     </div>
   </div>
@@ -239,35 +259,45 @@ footer{width:100%;padding:32px 16px;text-align:center;border-top:2px solid #FFD7
   <div class="container-lg">
     <h2>勝利への道筋</h2>
     <p class="subtitle">- HOW TO PLAY -</p>
-    <div class="howto-list">
+    <div class="ens-grid">
       <!-- 金演出 -->
-      <div class="howto-card">
-        <img src="images/kin.png" alt="金演出" style="filter:blur(10px)">
-        <div class="content">
-          <h3>金演出</h3>
-          <div class="meter-bar"><div class="meter-fill" style="width:95%;background:linear-gradient(90deg,#FF1744,#FFD700);box-shadow:0 0 12px #FF1744"></div></div>
-          <p class="meter-label">期待値 95%</p>
+      <div class="ens-card gold">
+        <div class="ens-img-wrap">
+          <img src="images/kin.png" alt="金演出" style="filter:blur(10px)">
+        </div>
+        <div class="ens-body">
+          <h3 class="ens-label">金演出</h3>
+          <p class="ens-desc">これが出たら<strong>PSA10確定級</strong>！！<br>最高ランクの激アツ演出</p>
+          <div class="ens-meter"><div class="ens-meter-fill" style="width:95%"></div></div>
+          <p class="ens-expect">期待値 95%</p>
         </div>
       </div>
       <!-- 赤演出 -->
-      <div class="howto-card">
-        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663526934310/f7fVVpZ6rZNq4FBiHQPfyK/pasted_file_dj8L7O_赤_387b110a.png" alt="赤演出">
-        <div class="content">
-          <h3>赤演出</h3>
-          <div class="meter-bar"><div class="meter-fill" style="width:70%;background:linear-gradient(90deg,#FF6B00,#FFD700);box-shadow:0 0 12px #FF6B00"></div></div>
-          <p class="meter-label">期待値 70%</p>
+      <div class="ens-card red">
+        <div class="ens-img-wrap">
+          <img src="images/red-enshutu.png" alt="赤演出">
+        </div>
+        <div class="ens-body">
+          <h3 class="ens-label">赤演出</h3>
+          <p class="ens-desc">十分アツい！<strong>高額カード</strong>の<br>チャンスが大きく広がる</p>
+          <div class="ens-meter"><div class="ens-meter-fill" style="width:70%"></div></div>
+          <p class="ens-expect">期待値 70%</p>
         </div>
       </div>
       <!-- 青演出 -->
-      <div class="howto-card">
-        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663526934310/f7fVVpZ6rZNq4FBiHQPfyK/pasted_file_5KaagF_青_d365239c.png" alt="青演出">
-        <div class="content">
-          <h3>青演出</h3>
-          <div class="meter-bar"><div class="meter-fill" style="width:45%;background:linear-gradient(90deg,#FFD700,#FF6B00);box-shadow:0 0 12px #FFD700"></div></div>
-          <p class="meter-label">期待値 45%</p>
+      <div class="ens-card blue">
+        <div class="ens-img-wrap">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663526934310/f7fVVpZ6rZNq4FBiHQPfyK/pasted_file_5KaagF_青_d365239c.png" alt="青演出">
+        </div>
+        <div class="ens-body">
+          <h3 class="ens-label">青演出</h3>
+          <p class="ens-desc">まだまだ勝負はこれから！<br><strong>逆転の一撃</strong>が潜んでいる</p>
+          <div class="ens-meter"><div class="ens-meter-fill" style="width:45%"></div></div>
+          <p class="ens-expect">期待値 45%</p>
         </div>
       </div>
     </div>
+    <p class="ens-note">※実際の演出は登録してからのお楽しみ</p>
   </div>
 </section>
 
@@ -360,8 +390,8 @@ footer{width:100%;padding:32px 16px;text-align:center;border-top:2px solid #FFD7
   <h2 style="text-align:center;margin-bottom:24px;font-family:'Reggae One',sans-serif;font-size:clamp(28px,6vw,48px);color:#FFD700;font-weight:bold;text-shadow:2px 2px 0 #FF1744,4px 4px 0 #0a0a0a;line-height:1.4;position:relative;z-index:10">
     さあ、準備はいいか？<br>お前の運を<br>ここで試せ！！
   </h2>
-  <p style="text-align:center;margin-bottom:48px;font-size:clamp(14px,4vw,18px);position:relative;z-index:10">今すぐ激アツオリパを引くぞ</p>
-  <a href="https://gangu-center.com/?cd=vthbb3" class="cta-btn cta-btn-lg" style="position:relative;z-index:10">軍資金を受け取る</a>
+  <p style="text-align:center;margin-bottom:48px;font-size:clamp(14px,4vw,18px);position:relative;z-index:10;color:#FFD700;text-shadow:2px 2px 0 #0a0a0a">今すぐ激アツオリパを引くぞ</p>
+  <a href="https://gangu-center.com/?cd=vthbb3" class="cta-btn cta-btn-lg" style="position:relative;z-index:10">今すぐオリパを引く</a>
   <p class="cta-micro" style="position:relative;z-index:10">初回出陣サポートあり</p>
 </section>
 
